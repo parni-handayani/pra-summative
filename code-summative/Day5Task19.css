@@ -1,0 +1,21 @@
+#selector1,
+#selector2,
+#selector3 {
+    background-color: black;
+}
+
+p {
+    font-size: 15px;
+}
+
+#boldText {
+    font-weight: bold;
+}
+
+.centeredText {
+    text-align: center;
+}
+
+* {
+    color: black;
+}
