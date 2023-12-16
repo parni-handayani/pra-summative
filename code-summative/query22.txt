@@ -1,0 +1,27 @@
+CREATE DATABASE IF NOT EXISTS `prabootcamp-summative`;
+
+SHOW DATABASES;
+
+USE prabootcamp-summative;
+
+CREATE TABLE IF NOT EXISTS product (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    	articleNumber VARCHAR(50) UNIQUE,
+    	name VARCHAR(255) UNIQUE,
+    	description TEXT UNIQUE,
+    	price DECIMAL(10,2)
+    	);
+
+ALTER TABLE product ADD UNIQUE (price);
+
+DESCRIBE product;
+
+CREATE TABLE IF NOT EXISTS productImages (
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    	productId INT,
+    	imageUrl VARCHAR(255),
+    	FOREIGN KEY (productId) REFERENCES product(id)
+    	);
+
+
+
